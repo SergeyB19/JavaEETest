@@ -15,7 +15,7 @@
 <p>
     <%
         for (int i = 0; i < 10; i++) {
-            out.println("<p>" + "Hello : " + i + "</p>");
+            System.out.println("<p>" + "Hello : " + i + "</p>");
         }
     %>
 </p>
@@ -29,6 +29,13 @@
     <%= someString %>
     <%= "Hello world" %>
     <%= new java.util.Date() %>
+    <%@page import="java.util.Date, logic.TestClass" %>
+    <%TestClass testClass = new TestClass(); %>
+    <%=testClass.getInfo()%>
+
+    <%
+        new Date();
+    %>
 </p>
 </body>
 </html>
