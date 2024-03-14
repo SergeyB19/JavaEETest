@@ -21,6 +21,12 @@
 </p>
 <p>
     <%
+        String name = request.getParameter("name");
+    %>
+
+    <%= "Hello, " + name %>
+
+    <%
         java.util.Date now = new java.util.Date();
         String someString = "Текущая дата: " + now;
 
