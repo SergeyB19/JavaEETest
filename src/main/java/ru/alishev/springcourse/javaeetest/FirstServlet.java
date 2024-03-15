@@ -1,5 +1,6 @@
 package ru.alishev.springcourse.javaeetest;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -28,5 +29,12 @@ public class FirstServlet extends HttpServlet {
         printWriter.println("<h1>" + message + "</h1>");
         printWriter.println("<h1>" + name + " " + surname + " </h1>");
         printWriter.println("</html>");
+
+        resp.sendRedirect("https://www.google.com");
+
+        resp.sendRedirect("/testJSP.jsp");
+
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/testJSP.jsp");
+        dispatcher.forward(req, resp);
     }
 }
